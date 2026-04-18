@@ -1,0 +1,22 @@
+# Executive Brief Template (V1.0)
+name: "Executive Brief"
+framework: "Minto SCQR"
+focus: "Decision Impact"
+
+spine:
+  - section: "The Answer"
+    constraint: "Must be the first 25 words."
+    objective: "Communicate the resolution immediately."
+  - section: "The Situation"
+    constraint: "Bullet points only."
+    objective: "Establish the context for the decision."
+  - section: "The Complication"
+    constraint: "Identifies exactly ONE friction point."
+    objective: "Justify the need for action."
+  - section: "The Action Plan"
+    constraint: "Grouped by the Rule of Three."
+    objective: "Detail the next steps."
+
+target_metrics:
+  clarity_rank: "A"
+  brevity_score: "High"

@@ -50,6 +50,8 @@ Parse `LOG_TEXT` and search for these failure signatures in this order (most sev
 - **HIGH**: missing required tool parameter
 - **MEDIUM**: infinite loop detection (same tool called more than 3 times with identical parameters)
 - **MEDIUM**: timeout on external API call
+- **MEDIUM**: model overload (MiniMax capacity reached)
+- **MEDIUM**: schema rejection (Perplexity/API payload invalid)
 - **LOW**: rate limit hit on Brave Search or any API
 
 If `LOG_TEXT` is too large to process within context, use this fallback command instead:
@@ -81,6 +83,8 @@ Based on **ERROR TYPE** and the matched signature, generate a specific recovery 
 - Infinite loop → instruct the agent to break the task into smaller subtasks and retry each one separately.
 - Timeout → instruct the agent to retry with a shorter timeout and a fallback data source.
 - Rate limit → instruct the agent to wait 60 seconds and retry with exponential backoff.
+- Model Overload → instruct the agent to switch to a secondary provider (e.g., Claude 3.5 Sonnet) OR retry after 30 seconds.
+- Schema Rejection → instruct the agent to simplify the tool parameters, removing optional or complex JSON nesting, and retry.
 - Fatal/uncaught exception → instruct the agent to restart the failed stage from the last successful step.
 
 Output the recovery prompt directly to the user **prefixed** with:

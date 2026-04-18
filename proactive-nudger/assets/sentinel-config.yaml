@@ -1,0 +1,18 @@
+# Proactive Sentinel Configuration
+
+sentinel:
+  name: "Accountability Sentinel"
+  ledger_path: "/Users/igorsilva/.openclaw/workspace/state/habit-ledger.jsonl"
+  skills_root: "/Users/igorsilva/.openclaw/skills/"
+  
+messaging:
+  bridge: "openclaw message send"
+  target_number: "+447533464436"
+  gateway_token: "fe239f5f3e6084355b30f3ade9a66f1196f89d8771fb80ed"
+
+monitoring:
+  default_interval: "2d"
+  quiet_hours:
+    start: "22:00"
+    end: "08:00"
+  enabled: true

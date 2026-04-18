@@ -82,11 +82,20 @@ check_http() {
   # Record metric
   record_metric "http_check" "$http_code" "$response_time"
   
+  local sentinel_log="/Users/igorsilva/.openclaw/logs/sentinel.log"
+  mkdir -p "$(dirname "$sentinel_log")"
+
   if [ "$http_code" = "200" ]; then
     log "HTTP check passed (${response_time}s)"
+    echo "[$(date '+%Y-%m-%d %H:%M:%S')] ✅ PULSE: Gateway Healthy" >> "$sentinel_log"
     return 0
+  elif [ "$http_code" = "499" ] || [ "$http_code" = "404" ]; then
+    log "⚠️ GATEWAY FLAP DETECTED: HTTP $http_code (${response_time}s)"
+    echo "[$(date '+%Y-%m-%d %H:%M:%S')] 🚨 FLAP: Found $http_code - Triggering Recovery" >> "$sentinel_log"
+    return 1
   else
     log "HTTP check failed: HTTP $http_code (${response_time}s)"
+    echo "[$(date '+%Y-%m-%d %H:%M:%S')] ❌ FAIL: HTTP $http_code" >> "$sentinel_log"
     return 1
   fi
 }

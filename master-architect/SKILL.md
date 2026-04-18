@@ -36,6 +36,9 @@ Instead of generic skeletons, the architect retrieves 2–3 closest "Production"
 **4. Bounded Repair Loops.**
 If a skill fails validation, the architect has exactly 3 iterations to repair it via minimal patching. If it still fails, it must escalate to you with a diagnostics report.
 
+**5. The Library Broker (InfraNodus Lens).**
+The architect must evaluate every new skill against the entire library. It looks for "Thematic Islands" (clusters) and prioritizes "Bridges" (skills that connect disparate clusters). It actively discourages redundant skills.
+
 ---
 
 ### Internal Quality Check (Anti-Drift)
@@ -78,17 +81,19 @@ If the user runs `/architect` (or with `status`):
 
 ### The Forge Phase (Work)
 
-**1. Intake & Boundary (`/architect new`)**
-- Perform "Boundary Critique": What is the goal? What are the allowed tools? What is out of scope?
-- Create the **Spec-File** (intake notes).
+**1. Intake & Boundary / Structural Gap Audit (`/architect new`)**
+- Perform **Boundary Critique**: What is the goal? What are the allowed tools? What is out of scope?
+- Perform **Structural Gap Audit**: Does this skill bridge two existing islands? If not, is it redundant?
+- Create the **Spec-File** using `assets/boundary-critique-template.yaml`.
 
-**2. Drafting (Produce)**
+**2. Drafting / Procedural Gap Check (Produce)**
 - Retrieve patterns from the 3 closest passing skills.
-- Generate the `SKILL.md` and any supporting scripts in `~/.openclaw/skills/<name>/`.
+- Generate the `SKILL.md` following the elite structure (`scripts/`, `references/`, `assets/`).
+- Perform **Procedural Gap Check**: Audit the generated procedure for "disconnected steps" (Structural Holes).
 
 **3. Validate & Repair (Check)**
-- Run `/Users/igorsilva/.openclaw/master-architect/scripts/validate_skillmd.py`.
-- Run `/Users/igorsilva/.openclaw/master-architect/scripts/check_no_invented_tools.py`.
+- Run `~/.openclaw/skills/master-architect/scripts/validate_skillmd.py`.
+- Run `~/.openclaw/skills/master-architect/scripts/check_no_invented_tools.py`.
 - If FAIL: Trigger the **Bounded Repair Loop** (Max 3 turns).
 - Update the **Skill Ledger**.
 
@@ -130,7 +135,7 @@ If the user runs `/architect` (or with `status`):
 
 2. Run a library-wide health audit:
 ```bash
-/opt/anaconda3/bin/python3 /Users/igorsilva/.openclaw/skills/master-architect/scripts/improve_skills.py
+/opt/anaconda3/bin/python3 ~/.openclaw/skills/master-architect/scripts/improve_skills.py
 ```
    → Expected: The output returns the "IMPROVEMENT RUN" report with SCANNED/CHANGED counts.
 
@@ -142,7 +147,11 @@ If the user runs `/architect` (or with `status`):
    → If a user asks for a skill with an invented tool (e.g. `send_email`).
    → Expected: The output returns a "Tool Conflict" error during the Intake phase.
 
-5. Negative Case — No Goal:
+5. **Structural Broker Test**:
+   - Run: `/architect new name:search-v2 goal:another web search tool`
+   - Expected: The Architect flags this as a "Redundant Cluster" (since `research` exists) and suggests a "Bridge" strategy instead.
+
+6. Negative Case — No Goal:
    → If user provides a name but no goal.
    → Expected: The output returns a clarifying question about the skill's boundary.
 

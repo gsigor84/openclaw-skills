@@ -1,0 +1,8 @@
+{
+  "engine_version": "V3.1",
+  "centrality_threshold": 0.05,
+  "min_cluster_size": 3,
+  "max_terms_per_cluster": 8,
+  "output_formats": ["markdown", "json"],
+  "visualization_enabled": false
+}

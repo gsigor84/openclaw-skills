@@ -1,0 +1,20 @@
+# Minto Gauntlet Drill Pack (V1.0)
+name: "The Minto Gauntlet"
+objective: "Master Top-down Structural Integrity"
+steps:
+  - id: "S-Identify"
+    prompt: "Isolate the Situation. What is the stable baseline for this project?"
+    target_metric: "Single-sentence clarity"
+  - id: "C-Trigger"
+    prompt: "Inject the Complication. What changed to make the situation a problem?"
+    target_metric: "Conflict density"
+  - id: "Q-Frame"
+    prompt: "Formulate the Question. What must the student solve?"
+    target_metric: "Direct linkage to Complication"
+  - id: "R-Resolve"
+    prompt: "Draft the Resolution. Provide the top-line answer."
+    target_metric: "Answer-First adherence"
+
+success_criteria:
+  minto_score: 0.85
+  word_count_max: 150

@@ -1,0 +1,17 @@
+# research-mission.yaml
+# Template for configuring complex research tasks
+
+mission_name: "Strategic Industry Audit"
+target_domains:
+  - "example.com"
+  - "competitor.ia"
+modes:
+  - editorial: true
+  - structural_gap: true
+filters:
+  min_relevance: 0.8
+  ignore_forums: true
+  verify_endpoints: true
+output:
+  format: "markdown"
+  include_graph: true

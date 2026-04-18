@@ -1,0 +1,133 @@
+name: obsidian
+version: 1.0.0
+summary: "Elite knowledge-graph interaction with Obsidian vault via Direct Filesystem"
+systems:
+  - node:fs
+  - tools
+  - models
+tools:
+  - name: search_obsidian
+    description: "Search notes in the Obsidian vault using a query. Supports folder scoping and results limits."
+    parameters:
+      type: object
+      required:
+        - query
+      properties:
+        query:
+          type: string
+          description: "Search term or phrase."
+        folder:
+          type: string
+          description: "Optional folder path to narrow the search."
+        maxResults:
+          type: number
+          default: 10
+    handler:
+      call:
+        mcp:
+          server: obsidian
+          method: search
+          params:
+            query: '{{query}}'
+            path: '{{folder}}'
+
+  - name: read_obsidian_note
+    description: "Read a specific note from the Obsidian vault by filename."
+    parameters:
+      type: object
+      required:
+        - filename
+      properties:
+        filename:
+          type: string
+          description: "Path relative to the vault root (e.g. 'notes/index.md'). Must not start with '/' or '..'."
+    handler:
+      call:
+        mcp:
+          server: obsidian
+          method: read
+          params:
+            path: '{{filename}}'
+
+  - name: create_obsidian_note
+    description: "Create a new note in the Obsidian vault with a title and optional tags. Automatically injects standard frontmatter."
+    parameters:
+      type: object
+      required:
+        - title
+      properties:
+        title:
+          type: string
+          description: "Title of the note."
+        folder:
+          type: string
+          description: "Folder path inside the vault (optional)."
+        tags:
+          type: array
+          items:
+            type: string
+          description: "Tags (e.g. ['#ai', '#research'])."
+        content:
+          type: string
+          description: "Initial Markdown content (optional)."
+  - name: append_to_obsidian_note
+    description: "Append content to an existing Obsidian note. Updates the 'updated' timestamp in frontmatter."
+    parameters:
+      type: object
+      required:
+        - filename
+        - content
+      properties:
+        filename:
+          type: string
+          description: "Path relative to the vault root."
+        content:
+          type: string
+          description: "Markdown content to append."
+
+  - name: list_obsidian_notes
+    description: "List notes in a specific folder or by tag."
+    parameters:
+      type: object
+      properties:
+        folder:
+          type: string
+          description: "Folder to list."
+        tag:
+          type: string
+          description: "Optional tag filter."
+    handler:
+      call:
+        mcp:
+          server: obsidian
+          method: list
+          params:
+            path: '{{folder}}'
+            tag: '{{tag}}'
+
+  - name: get_obsidian_backlinks
+    description: "Retrieve all notes that link to a specific note."
+    parameters:
+      type: object
+      required:
+        - filename
+      properties:
+        filename:
+          type: string
+          description: "Target note filename."
+    handler:
+      call:
+        mcp:
+          server: obsidian
+          method: backlinks
+          params:
+            path: '{{filename}}'
+
+  - name: get_obsidian_tags
+    description: "List all unique tags present in the Obsidian vault."
+    handler:
+      call:
+        mcp:
+          server: obsidian
+          method: tags
+          params: {}

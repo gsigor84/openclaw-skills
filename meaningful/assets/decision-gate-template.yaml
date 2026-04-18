@@ -1,0 +1,14 @@
+# decision-gate-template.yaml
+# Used by Meaningful V3.0 to audit high-stakes choices
+
+decision_name: "TBD"
+intended_action: "What I'm about to do"
+true_blocked_task: "The harder thing I'm avoiding"
+
+verdict_markers:
+  is_performing: true # Does this only happen because I'm being watched?
+  is_compound: true # Does this genuinely unblock future work?
+  is_endurance: true # Does this require grit or just a detour?
+
+final_verdict: "GROWTH | AVOIDANCE"
+required_adjustment: "How to pivot back to the target"

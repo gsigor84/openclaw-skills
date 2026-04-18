@@ -1,0 +1,20 @@
+# bridge-audit-template.yaml
+# Used by Meaningful V3.1 for high-level strategic audits
+
+audit_date: "TBD"
+
+islands:
+  - name: "The Safe Cluster (e.g. Learning/Research)"
+    activity_density: "High"
+    comfort_level: "High"
+  - name: "The Objective Cluster (e.g. Shipping/Sales)"
+    activity_density: "Low"
+    comfort_level: "Low"
+
+structural_hole:
+  gap_description: "The disconnected space between [Island A] and [Island B]."
+  reason_for_hole: "Fear, Perfectionism, or Analysis Paralysis?"
+
+bridge_mission:
+  required_action: "The single task that connects the two clusters."
+  verdict: "GROWTH"

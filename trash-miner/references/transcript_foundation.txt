@@ -1,0 +1,78 @@
+identify the gaps in the thinking of their human counterparts and then ask
+questions or provide ideas to bridge the gaps. And that's where Infernotus is
+like moving from just a you know text
+processing tool to more of a like mind
+optimizing tool because it's asking questions that gets people to think
+about things from a perspective that they as a human would not be able to think about because they're like in
+their lives. And that's really where I see, you know, why Infernotice is a tool
+that I'm not really seeing any other technology really even go down this path
+where they're expediting your ability to do work, but are they actually inspiring
+you to be able to think better? And for a human being, you know, as a species,
+like our minds and our ability to think is really what differentiates us from
+other people even. but other species. And now to be augmented with a machine
+intelligence that can passively do that um is is to me like it gives me
+goosebumps honestly thinking about it sometimes and you know I'll even show some examples of what the very initial
+outcomes are like and you know they make you start believing
+like maybe we are farther along to the future than than we even uh anticipate. But you know once I have everything set
+up uh into these databases um and we know that different statements
+go to different departments I run this second workflow which is just going
+through my table my database and then organizing the different statements into
+the appropriate graphs. So if it's a statement about manufacturing it goes
+into the manufacturing. If it's about sales it goes into the sales graph. And that way information that's relevant to
+that department ends up in that department. But if you're a individual
+who spans multiple departments, you just get access to multiple graphs. So it's not like you're really losing any
+information because the graphs are being sort of self uh um self-contained based
+on department. Um, and you know, it's really great, I think, to see just as
+people are talking about their day-to-day life, to see a graph uh come
+into into picture. Um, and like I was saying, no other vector database that I'm aware
+of really gives you the option to do something like this where you're like, hey, seeing this term CNC operator is
+having too much of an impact on the graph as a structure. So whenever LLMs
+are coming in here, they're always hitting the CNC operator node and then like making decisions on how to navigate
+and interpret based off that. But I know like okay, this is sort of meaningless
+because it's in the CNC graph. Like obviously we're always going to be talking about the CNC operator and being
+able to remove that from the graph and then let's say even something like um
+CNC router that's something no other tool as far as I'm aware of and I you
+know I don't know everything no other tool allows and you know if we really think about
+these graphs as being the knowledge structures or brains that LLM inhabit it
+then curating the mind allows the quality of the output
+that the LLM provide us to be really high meaningful quality. Um and and
+that's to me you know if you're using vector databases it's like why bother
+like learning about the complexity of how to deal with those things. Dimmitri and his team have sort of abstracted all
+of that for us where you just send the data to these graphs. You know, they do the hard work of storage and and
+optimization. And especially with the MCP and the visual tool, you can get to be a digital
+brain surgeon. Like that's honestly what it feels like to me when I'm in the Infernotus tool. I really feel like I'm
+uh you know doing brain surgery on the agents that I'm building for for my
+customers. Um and and especially if you use it in the Chrome extension or in uh
+Obsidian where you can sort of interact with it in uh three-dimensional space uh
+it feels like Bladeunner. Like honestly it's like one of the most exciting ways I think of interacting with the tool. Um
+because like vision is like how humans get 90% of their information. So the
+fact that we have a tool that lets us visualize our mind like this is is is
+incredibly significant I think. Um so now let's uh leave the uh the land of
+technicality and go into um you know how do we actually use this in uh day-to-day
+life. So one example is um you know I'm like hey uh Ovis go ahead and do an
+analysis uh on these graphs. So for my customer uh their prefix is OCC. So any
+graphs that start with OCC or for that particular customer and then you know it comes out and it
+takes some time to learn how to like understand graphs um and and really gain
+information from them cuz like it's its own sort of discipline uh more than
+anything else. But it starts to give really meaningful insights such as hey
+in this business you have this one operator. None of this information is written anywhere. It all lives in his mind. And
+you know that's something that's a huge problem for many businesses. Tribal knowledge like all of the information
+about how to run your business lives in the mind of different individuals. And
+as a business that's like a risk cuz if they leave you literally are losing a
+part of the business. But now that you have the collective hive mind,
+everyone's information knowledge becomes everyone else's knowledge. And the
+ability to share knowledge like that to have this central repository that you
+can dive into using conversation at any time. Incredible. um we were already
+seeing it where you know the business um is at capacity. So a new hire can't just
+go to a seasoned operator and ask questions because there's a bunch of work to do. Now they're going to the
+hive mind which is an infernotus knowledge graph and asking hey how do I
+do this one particular process and it'll be clawed going into infernotis through
+MCP figuring out you know the different information about that topic and then
+coming back with an explanation and it's able to communicate at the level of the
+operator right it can dumb itself down or uh smart itself up as much as needed
+based on that communication ation style and like we are slowly getting rid of
+the bottleneck and risk that is tribal knowledge and that's like a foundational
+change in many businesses specifically manufacturing where you know you have
+these experts that have been doing it for decades but as they start moving into retirement a big issue is like how
+are we going to u how are we going to to address
+... [truncated for space as it's a copy of the same text I just viewed]

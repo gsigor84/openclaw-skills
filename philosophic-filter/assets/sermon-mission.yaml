@@ -1,0 +1,19 @@
+# Sermon Mission Configuration Template
+
+mission:
+  name: "Philosophic Filter Sermon Generation"
+  objective: "Synthesize Maimonides commentary into a modern urban sermon (PT-BR) using the Nietzschean Arc."
+  constraints:
+    max_word_count: 400
+    language: "Portuguese (Brazilian)"
+    jargon_filter: "Strict - No philosophical or theological labels."
+
+delivery:
+  gateway: "sessions_send" # The WhatsApp bridge
+  target_number: "+447533464436"
+  sign_off: "Com esperança, Adam."
+
+source_context:
+  directory: "~/clawd/knowledge/maimonides/"
+  engine_reference: "references/nietzschean-arc.md"
+  persona_reference: "references/rabbi-persona.md"

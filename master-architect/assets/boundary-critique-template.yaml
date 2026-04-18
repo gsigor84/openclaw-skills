@@ -1,0 +1,17 @@
+# boundary-critique-template.yaml
+# Used by Master Architect during the 'new' mission
+
+skill_name: "TBD"
+goal: "Primary objective of the skill"
+
+boundary_critique:
+  musts: []
+  must_nots: []
+  allowed_tools: []
+
+structural_gap_analysis:
+  cluster_identity: "e.g. Utility, Research, Creative"
+  is_bridge: true # Does this bridge two existing islands?
+  bridging_targets: [] # Which islands does it connect?
+  redundancy_risk: "e.g. Low, Medium, High"
+  differentiation_strategy: "What makes this unique?"

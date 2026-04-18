@@ -1,40 +1,24 @@
 ---
 name: skill-gap-analysis
-description: "Strategic Gap Analyst. Performs modularity-based community detection and gap identification across research corpora. Generates bridging questions to unify isolated thematic islands."
+description: "The InfraNodus core. Performs structural hole analysis on any text corpus to identify disconnected clusters and the thematic bridges between them."
 ---
 
 # skill-gap-analysis
 
 ## Trigger
-`/skill-gap-audit [corpus-dir]`
+`/gap-audit <text_or_file>`
 
 ## Use
-
-Use this skill to perform a structural audit of a research project or knowledge base. The analyst identifies "Thematic Islands"—clusters of information that are well-developed but isolated from other parts of the project—and suggests **Bridging Questions** to create a unified, high-fidelity research outcome.
+Use this skill to identify structural holes in a project, a research corpus, or a skill library. It build a co-occurrence graph of tokens and detects clusters that are not talking to each other.
 
 **The analyst will help you:**
-- **Visualize the Map**: Identifies which topics are over-saturated and which are thin.
-- **Connect Ideas**: Proposes synthetic questions to link isolated clusters.
-- **Track Progress**: Synchronizes audit results with your project's persistent research log.
-
-**The analyst will NOT:**
-- **Summarize content**: It is a structural tool, not a summarizer.
-- **Invent data**: It only identifies gaps in the *relationship* between existing nodes.
+- **Find Brokerage Opportunities**: Identify concepts that can bridge disconnected domains.
+- **Audit Redundancy**: See where your research is looping in the same cluster.
+- **Strategic Direction**: Provides the "Missing Link" query for your next search mission.
 
 ---
 
 ## Guiding Principles
-
-**1. Community Centrality.**
-A project is only as strong as its weakest link. Focus on the "PageRank" of your concepts—identify which ideas are central to your thesis and which are orphaned in the periphery.
-
-**2. The Bridge is the Goal.**
-Identifying a gap is only the first step. The job is not finished until you have generated at least 3 high-quality **Bridging Questions** that force the synthesis of isolated themes.
-
-**3. Modularity-Based Communities.**
-Use modularity-based community detection to find "Thematic Islands." These are clusters with high internal density but low external connectivity.
-
----
 
 ### Internal Quality Check (Anti-Drift)
 
@@ -75,16 +59,16 @@ If the user runs `/skill-gap-audit` (or with a directory):
 **1. Execution**
 - Run the python analyzer:
   `/opt/anaconda3/bin/python3 /Users/igorsilva/clawd/tools/skill_gap_analysis.py --input-dir [input] --output-dir [output]`
-- Output the audit artifacts to `/Users/igorsilva/.openclaw/workspace/audits/[project-name]/`.
+- The analyzer builds a sliding-window co-occurrence graph (window=5) and detects communities.
 
 **2. Synthesis**
-For each identified community/gap:
-1. List the **Thematic Island** (Key nodes in the cluster).
-2. Highlight the **Structural Hole** (Missing connection).
-3. Present the **Bridging Questions**.
+For each identified **Structural Hole**:
+1. Identify **Node A** and **Node B** (Disconnected high-betweenness concepts).
+2. Report the **Gap Score** (Structural hole density).
+3. Present the **Bridging Questions** to force synthesis between these domains.
 
 **3. Log Update**
-- Synchronize with `research-log.md`.
+- Synchronize with `research-log.md` with updated community counts and primary gap focus.
 
 ---
 
@@ -93,9 +77,9 @@ For each identified community/gap:
 - **min-degree** (optional): minimum connectivity for a node to be included in the graph.
 
 ## Outputs
-- **Island Map**: A summary of identified thematic clusters.
+- **Structural Hole Map**: A report of disconnected high-focus pairs.
 - **Bridging Questions**: High-fidelity questions to close structural holes.
-- **Audit Bundle**: Path to `graph.gexf` and `communities.json`.
+- **Audit Bundle**: Path to `skill-gap-graph.gexf` and `gap-meta.json`.
 
 ---
 

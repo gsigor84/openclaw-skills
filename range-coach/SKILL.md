@@ -1,6 +1,8 @@
 ---
 name: range-coach
 description: "Range Coach. A systematic framework for non-linear career and life development. Guides the user through the 5 phases of the Range Audit: Interest Inventory, LINC Analysis, Sorting Hat prioritization, Focus Mapping, and Golden Thread integration."
+metadata:
+  { "proactive": true, "nudge_interval": "2d" }
 ---
 
 # range-coach

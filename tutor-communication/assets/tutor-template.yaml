@@ -1,0 +1,11 @@
+# tutor-template.yaml
+# Configuration for specialized tutor missions
+
+mission:
+  framework_priority: "Rule of Three"
+  persona_intensity: "Adam-High" # Minimal filler, maximum evaluation
+  structural_bridge_discovery: true
+  memory_context: true
+
+assets:
+  default_exercise: "Clutter Purge"
