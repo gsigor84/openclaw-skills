@@ -36,34 +36,6 @@ QBQs are meant to be asked internally, not spoken aloud as accusations.
 
 ---
 
-## Concept 3 — The Gap Between Intention and Action
-
-Caused by lack of clarity, not lack of motivation. "Someday Isle" — vague aspirations with no plan.
-
-**Closers:**
-- Implementation Intention: "I will [BEHAVIOUR] at [TIME] in [LOCATION]"
-- Write goals down — crystallising on paper multiplies success probability by 1000%
-- Vote yourself off Someday Isle — take the first step immediately
-
----
-
-## Concept 4 — Two-Minute Rule
-
-Scale new habits down so they take less than two minutes:
-- "Run three miles" → "tie my running shoes"
-- "Publish an article" → "open the editor"
-- "Study Spanish" → "open the app"
-- "Do yoga" → "take out the mat"
-
-Purpose: master the habit of showing up before optimising. Standardise before you optimise.
-
-Variations:
-- Stop before it feels like work
-- Use Habit Shaping to scale up once consistency is established
-- Every micro-action is a "vote for the identity"
-
----
-
 ## Concept 5 — Above The Line / Below The Line
 
 **Below The Line (victim cycle):** ignoring problems, claiming "it's not my job," pointing fingers, covering tail, waiting for someone else to fix things.
@@ -77,18 +49,6 @@ Variations:
 **Solve It:** Ask "What else can I do to rise above my circumstances?" Stay engaged. Challenge assumptions. Don't let confusion become an excuse.
 
 **Do It:** Execute. Full responsibility for future accomplishments. Stop waiting for conditions to be perfect.
-
----
-
-## Concept 6 — Public Commitment
-
-Private goals are easy to abandon. Public commitments add a social cost to inaction — people can see you didn't deliver.
-
-**Why it works:**
-- Immediate cost to inaction: breaking a promise to others is public and painful
-- Social pressure: we care how we're perceived
-- Prevents hiding from failure: public exposure stops preparation-as-procrastination
-- Identity reinforcement: every public action votes for who you want to be
 
 ---
 
@@ -108,32 +68,89 @@ Private goals are easy to abandon. Public commitments add a social cost to inact
 
 ---
 
-## Concept 8 — Priority Setting: The Law of Three
+## Concept 8 — The Gap Between Intention and Action
 
-Identify the three tasks that account for 90% of your value. Those three are what you protect.
+The gap between intention and action is caused by lack of clarity, not lack of motivation.
 
-Pair **Stretch Goals** (big ambition) with **SMART proximal goals** (daily steps). Put the Stretch Goal at the top of the page; put SMART goals underneath.
+**"Someday Isle":** The state of vague aspirations with no execution anchor. Phrases like "I'll get to it," "I plan to start soon," and "Eventually I'll..." are Someday Isle language. They are not commitments. They are not logged.
 
-**ABCDE method:** Rank tasks A (must do, serious consequences), B (should do), C (nice to do), D (delegate), E (eliminate). Start A-1 first.
+**Closers — How to get off Someday Isle:**
+- **Implementation Intention formula:** "I will [BEHAVIOUR] at [TIME] in [LOCATION]." All three slots must be filled. If any slot is empty, the commitment is not real.
+- **Write it down:** Crystallising a goal on paper multiplies follow-through probability significantly.
+- **Take the first step immediately:** Vote yourself off Someday Isle by acting within the current session.
 
----
-
-## Concept 9 — Environment as Structure
-
-Reduce friction for good habits. Increase friction for bad ones.
-- Prime the environment in advance
-- Make cues highly visible
-- One space, one use
-- "Reset" the room after finishing
+**Diagnostic:** If the user cannot complete the Implementation Intention formula in under 60 seconds, they are on Someday Isle. Do not proceed. Do not log the commitment. Return to the formula.
 
 ---
 
-## Concept 10 — Building in Public / Momentum
+## Concept 9 — The Two-Minute Rule
 
-Building in public creates momentum because:
-- Social accountability forces consistent action
-- Forward motion motivates and energises
-- Identity is confirmed through repeated public action
-- The cost of inaction becomes public and painful
+Scale every new habit down until it takes less than two minutes to start.
 
-The combination of a public audience and daily action makes forward momentum virtually guaranteed.
+**Scaling examples:**
+- "Run three miles" → "Tie my running shoes"
+- "Publish an article" → "Open the editor"
+- "Study Spanish" → "Open the app"
+- "Do yoga" → "Take out the mat"
+
+**Purpose:** Master the habit of showing up before optimising. Standardise before you optimise.
+
+**Operating rules:**
+- Stop before it feels like work — the goal is to establish the pattern, not exhaust the effort
+- Use Habit Shaping to scale up once consistency is established
+- Every micro-action is a vote for the identity
+
+---
+
+## Concept 10 — The Law of Three (Priority Pre-Filter)
+
+Before ranking tasks with ABCDE, identify the three tasks that account for 90% of your value output. These are your protected tasks. Nothing displaces them.
+
+**The process:**
+1. Ask: "If I could only accomplish three things this week, what would make the biggest difference?"
+2. Write those three at the top. Label them Law-1, Law-2, Law-3.
+3. Everything else gets ranked A–E underneath.
+4. No B or C task may be worked until all three Law tasks have been addressed.
+
+**Pairing rule:** Set a Stretch Goal (big ambition) at the top of the page. Place SMART proximal goals (daily steps) underneath. The Stretch Goal is the destination; the SMART goals are the path.
+
+**Diagnostic:** If the user cannot name their Law of Three in under 60 seconds, they lack strategic clarity. Pause ABCDE ranking. Ask: "What would your best self say is the most important thing right now?"
+
+---
+
+## Concept 11 — Environment as Structure (Full Rules)
+
+Behaviour is a function of the person and their environment. Design the environment before relying on willpower.
+
+**Reduce friction for good habits:**
+- Prime the environment in advance (lay out workout clothes, open the blank document before bed)
+- Make cues highly visible — place triggers in plain sight
+- One space, one use — train your brain to associate a location with a single behaviour
+- "Reset" the room after finishing each activity to prime the next session
+
+**Increase friction for bad habits:**
+- Add steps between you and the bad habit (unplug the TV, delete the app, put the phone in another room)
+- Make the default option the good habit
+
+**Rule:** Never rely on motivation to overcome a friction problem. Fix the environment first.
+
+---
+
+## Concept 12 — Public Commitment & Momentum
+
+Private goals are easy to abandon. Public commitments add a social cost to inaction.
+
+**Why public commitment works:**
+- Immediate cost to inaction: breaking a promise publicly is painful and visible
+- Social pressure: we care how we are perceived
+- Prevents hiding from failure: public exposure stops preparation-as-procrastination
+- Identity reinforcement: every public action votes for who you want to be
+
+**The Commitment Process (4 steps):**
+1. **Make the commitment:** Clearly define what will be done and by when. Full sentence. Present tense. Specific deadline.
+2. **State it publicly:** Tell someone who will hold you to it — or log it in a format that creates accountability.
+3. **Return and report:** Proactively follow up with progress before being asked.
+4. **Own the result:** Whether the commitment was kept or broken, take full Above The Line responsibility for the outcome.
+
+**Valid commitment format:** "I will [SPECIFIC ACTION] by [DATE] at [TIME]."
+**Invalid commitment format:** Anything containing "try," "maybe," "soon," "eventually," or "when I get a chance."

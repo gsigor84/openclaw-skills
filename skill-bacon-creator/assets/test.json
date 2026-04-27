@@ -1,0 +1,113 @@
+{
+  "_readme": "Test cases for skill-bacon-creator v1.1. Each case traces to a recorded observation or experiment. Replace example entries with real session data before Phase 6.",
+  "skill": "(replace with skill niche — e.g. 'fetch jazz playlists from Spotify')",
+  "generated_by": "skill-bacon-creator",
+  "version": "1.1",
+  "generated_at": "(ISO timestamp — filled by handler.ts at Skill Foundry)",
+
+  "completion_rule": "All test cases with status 'needs_live_validation' must be resolved before deploy.sh runs. No case may remain 'empty'.",
+
+  "test_cases": [
+    {
+      "_comment": "EXAMPLE — happy path. Replace with real observation data.",
+      "id": "tc_001",
+      "source": "Observation 1",
+      "phase": "observation",
+      "variant": "happy_path",
+      "input": {
+        "tool": "fetch_url",
+        "query": "(paste exact query from observations.md)"
+      },
+      "expected": {
+        "status_code": 200,
+        "response_shape": ["id", "name", "tracks"],
+        "min_fields": 3
+      },
+      "actual": "(paste real result from observations.md — truncated at 500 chars)",
+      "result": "pass | fail | partial",
+      "status": "needs_live_validation",
+      "notes": ""
+    },
+    {
+      "_comment": "EXAMPLE — edge case / failure path. Every test suite must have at least one.",
+      "id": "tc_002",
+      "source": "Observation 2",
+      "phase": "observation",
+      "variant": "edge_case",
+      "input": {
+        "tool": "fetch_url",
+        "query": "(paste exact query that triggered the edge case)"
+      },
+      "expected": {
+        "status_code": 401,
+        "response_shape": ["error", "message"],
+        "behaviour": "auth wall — fallback to search_web should trigger"
+      },
+      "actual": "(paste real result from observations.md)",
+      "result": "pass | fail | partial",
+      "status": "needs_live_validation",
+      "notes": ""
+    },
+    {
+      "_comment": "EXAMPLE — experiment variant. One entry per experiment in experiments.md.",
+      "id": "tc_003",
+      "source": "Experiment 1",
+      "phase": "experiment",
+      "variant": "with_auth_header",
+      "input": {
+        "tool": "fetch_url",
+        "query": "(paste exact command or URL from experiments.md)",
+        "headers": {
+          "Authorization": "Bearer <token>"
+        }
+      },
+      "expected": {
+        "status_code": 200,
+        "response_shape": ["items", "total", "limit"],
+        "min_fields": 3
+      },
+      "actual": "(paste real result from experiments.md)",
+      "result": "pass | fail | partial",
+      "status": "needs_live_validation",
+      "notes": ""
+    },
+    {
+      "_comment": "EXAMPLE — rate limit probe. Required if 429 was observed.",
+      "id": "tc_004",
+      "source": "Observation 3",
+      "phase": "observation",
+      "variant": "rate_limit",
+      "input": {
+        "tool": "fetch_url",
+        "query": "(paste high-frequency probe from observations.md)"
+      },
+      "expected": {
+        "status_code": 429,
+        "behaviour": "back off 2s, retry once — per Rule 3"
+      },
+      "actual": "(paste real result)",
+      "result": "pass | fail | partial",
+      "status": "needs_live_validation",
+      "notes": ""
+    }
+  ],
+
+  "status_legend": {
+    "needs_live_validation": "Populated from observation data but not yet re-validated against live environment",
+    "validated": "Re-run against live environment and confirmed",
+    "blocked": "Cannot validate — dependency missing (e.g. API token not available)",
+    "skipped": "Intentionally skipped with documented reason"
+  },
+
+  "result_legend": {
+    "pass": "Actual output matches expected shape and status code",
+    "fail": "Actual output does not match — see notes",
+    "partial": "Some fields matched, others missing or unexpected — see notes"
+  },
+
+  "gates": {
+    "minimum_cases": 3,
+    "required_variants": ["happy_path", "edge_case"],
+    "blocked_on_deploy": ["needs_live_validation", "fail"]
+  }
+}

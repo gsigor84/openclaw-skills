@@ -1,0 +1,11 @@
+.DS_Store
+
+# Python
+__pycache__/
+*.py[cod]
+
+# Local scratch / backups
+*.bak
+
+# Generated / local state
+state.json

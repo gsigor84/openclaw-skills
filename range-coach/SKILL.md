@@ -43,6 +43,10 @@ All progress is stored in the **Coaching Ledger**:
 
 **Mandatory Action**: At the start of every `/coach` turn, read the `coach-log.md` to identify the current Phase and resume exactly where we left off.
 
+**End-of-Session Logging**: After every `/coach` session ends, call:
+`/opt/anaconda3/bin/python3 /Users/igorsilva/.openclaw/skills/range-coach/scripts/manage_ledger.py touch`
+This logs a timestamp to `habit-ledger.jsonl` so the proactive-nudger can track range-coach drift correctly. Without this step, the nudger reports false 100h+ drift for range-coach even when it was used today.
+
 ---
 
 ## Procedure

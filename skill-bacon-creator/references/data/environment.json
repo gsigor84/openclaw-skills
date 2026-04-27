@@ -1,0 +1,52 @@
+{
+  "_readme": "Snapshot of the Observation Lab environment at the time Phase 2 ran. Required for reproducibility — if someone re-runs the observations on a different machine or version, they can compare against this baseline.",
+
+  "generated_by": "skill-bacon-creator",
+  "version": "1.1",
+  "captured_at": "(ISO timestamp — filled by handler.ts at Phase 2 completion)",
+
+  "runtime": {
+    "node_version": "(fill in — run: node --version)",
+    "ts_node_version": "(fill in — run: npx ts-node --version)",
+    "platform": "(fill in — e.g. darwin, linux, win32)",
+    "arch": "(fill in — e.g. arm64, x64)",
+    "shell": "(fill in — e.g. /bin/zsh, /bin/bash)"
+  },
+
+  "tool_versions": {
+    "openclaw": "(fill in — run: openclaw --version or check package.json)",
+    "curl": "(fill in — run: curl --version | head -1)",
+    "ffmpeg": "(fill in if used — run: ffmpeg -version | head -1, or 'not used')",
+    "python": "(fill in if used — run: python --version, or 'not used')"
+  },
+
+  "tool_call_budget": {
+    "search_web": { "cap": 3, "used": "(fill in from state.json)" },
+    "exec":       { "cap": 1, "used": "(fill in from state.json)" },
+    "fetch_url":  { "cap": 1, "used": "(fill in from state.json)" }
+  },
+
+  "network": {
+    "internet_access": true,
+    "proxy": "(fill in — e.g. 'none' or proxy URL if applicable)",
+    "dns": "(fill in — e.g. '8.8.8.8' or 'system default')"
+  },
+
+  "target_endpoints": [
+    {
+      "url": "(paste the base URL probed during Phase 2 — e.g. https://api.spotify.com)",
+      "reachable": true,
+      "auth_required": "(true / false — confirmed by observation)",
+      "rate_limit_hit": "(true / false — confirmed by observation)",
+      "notes": ""
+    }
+  ],
+
+  "workspace": {
+    "skill_root": "(fill in — absolute path to skill-bacon-creator/ on this machine)",
+    "openclaw_skills_dir": "(fill in — e.g. /Users/igorsilva/.openclaw/skills)",
+    "os_user": "(fill in — run: whoami)"
+  },
+
+  "reproduction_notes": "(Any conditions that would affect reproducibility — e.g. 'API token scoped to igor@example.com account', 'rate limit observed at >2 req/sec', 'curl version differs from docs example')"
+}
